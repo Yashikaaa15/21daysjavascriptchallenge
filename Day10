@@ -1,0 +1,17 @@
+// day10.js
+function getCurrentDateTime() {
+    var currentDate = new Date();
+    var formattedDateTime = currentDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true
+    });
+
+    console.log('Current Date and Time:', formattedDateTime);
+}
+
+getCurrentDateTime();

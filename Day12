@@ -1,0 +1,24 @@
+// divideNumbers.js
+
+function divideNumbers(number1, number2) {
+    try {
+      // Attempt to perform division
+      const result = number1 / number2;
+  
+      // Check if the result is NaN (Not a Number)
+      if (isNaN(result)) {
+        throw new Error('Invalid division operation: Result is not a number.');
+      }
+  
+      // Display the result in the console if successful
+      console.log(`The result of ${number1} / ${number2} is: ${result}`);
+    } catch (error) {
+      // Handle errors, including division by zero
+      console.error(`Error: ${error.message}`);
+    }
+  }
+  
+  // Example usage:
+  // Uncomment the line below and replace the numbers with the values you want to divide.
+  divideNumbers(10, 2);
+  divideNumbers(5, 0); // Example with division by zero to trigger an error

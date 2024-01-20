@@ -1,0 +1,16 @@
+// Simulating Asynchronous Operation with Callbacks
+const simulateAsync = (callback) => {
+    setTimeout(() => {
+      console.log("Asynchronous operation completed!");
+      callback();
+    }, 2000); // Simulating a delay of 2000 milliseconds (2 seconds)
+  };
+  
+  // Callback Function
+  const callbackFunction = () => {
+    console.log("Callback function executed!");
+  };
+  
+  // Calling simulateAsync with the Callback
+  simulateAsync(callbackFunction);
+  

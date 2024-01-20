@@ -1,0 +1,14 @@
+// Step 1: Write a higher-order function named higherOrderFunction
+const higherOrderFunction = (callback) => {
+    // Step 2: Inside the higherOrderFunction, invoke the callback function
+    console.log("Executing higherOrderFunction");
+    callback();
+  };
+  
+  // Step 3: Create a separate callback function
+  const callbackFunction = () => {
+    console.log("Callback function executed!");
+  };
+  
+  // Step 4: Call the higherOrderFunction and pass the callback function as an argument
+  higherOrderFunction(callbackFunction);

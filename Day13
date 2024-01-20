@@ -1,0 +1,9 @@
+// Refactored function using arrow function and template literals
+const calculateSum = (number1, number2) => {
+    const sum = number1 + number2;
+    return `The sum is: ${sum}`;
+  };
+  
+  // Example usage:
+  console.log(calculateSum(15, 25));
+  console.log(calculateSum(1, 5));

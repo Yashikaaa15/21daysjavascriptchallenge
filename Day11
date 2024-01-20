@@ -1,0 +1,17 @@
+// emailValidator.js
+
+function validateEmail(email) {
+    // Regular expression for a basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+    // Test if the provided email matches the regular expression
+    const isValid = emailRegex.test(email);
+  
+    // Display the result in the console
+    if (isValid) {
+      console.log(`The email address "${email}" is valid.`);
+    } else {
+      console.log(`The email address "${email}" is not valid.`);
+    }
+  }
+  validateEmail('yashika2005kapoor@gmail.com');

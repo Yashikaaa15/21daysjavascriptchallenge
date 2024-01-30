@@ -1,0 +1,14 @@
+// Define an array of numbers
+const numbers = [1, 2, 3, 4, 5];
+
+// 1. Mapping Transformations
+const squaredNumbers = numbers.map(num => num * num);
+console.log("Squared numbers:", squaredNumbers);
+
+// 2. Filtering Elements
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log("Even numbers:", evenNumbers);
+
+// 3. Aggregate Computations
+const sumOfNumbers = numbers.reduce((acc, num) => acc + num, 0);
+console.log("Sum of numbers:", sumOfNumbers);

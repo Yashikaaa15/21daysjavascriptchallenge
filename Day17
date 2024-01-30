@@ -1,0 +1,28 @@
+// Original callback-based code
+function simulateAsync(callback) {
+    setTimeout(function() {
+        callback(null, 'Success');
+    }, 1000);
+}
+
+// Refactored code using Promises
+function simulateAsync() {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve('Success');
+        }, 1000);
+    });
+}
+
+// Refactoring to use async/await
+async function asyncSimulate() {
+    try {
+        const result = await simulateAsync();
+        console.log('Result:', result);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Calling the async function
+asyncSimulate();

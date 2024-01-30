@@ -1,0 +1,25 @@
+// Function to save data to local storage
+function saveData(key, value) {
+    // Convert value to JSON string before storing
+    const jsonValue = JSON.stringify(value);
+    // Store the JSON string in local storage with the specified key
+    localStorage.setItem(key, jsonValue);
+}
+
+// Function to retrieve data from local storage
+function getData(key) {
+    // Retrieve the JSON string from local storage using the specified key
+    const jsonValue = localStorage.getItem(key);
+    // Parse the JSON string to convert it back to its original format
+    return JSON.parse(jsonValue);
+}
+
+// Example usage
+const userData = { name: 'John', age: 30, email: 'john@example.com' };
+
+// Save user data to local storage
+saveData('user', userData);
+
+// Retrieve user data from local storage
+const retrievedData = getData('user');
+console.log('Retrieved user data:', retrievedData);
